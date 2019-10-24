@@ -16,8 +16,10 @@ def getTime():
 		timeOfTheDay = "Have a great Day!"
 	elif((timeVar[3]) > 13 and (timeVar[3]) <= 17):
 		timeOfTheDay = "Good Afternoon!"
-	elif((timeVar[3]) > 17):
+	elif((timeVar[3]) > 17 and (timeVar[3]) <= 20):
 		timeOfTheDay = "Good Evening!"
+	elif((timeVar[3]) > 20):
+		timeOfTheDay = "No data available!"		
 	else:
 		timeOfTheDay = "Thank you!"
 	return "It's " + str(timeVar[3]) + "H " + str(timeVar[4]) + "M " + str(timeVar[5]) + "S now. " + timeOfTheDay
@@ -47,7 +49,7 @@ class RasaNLP(object):
 	INTENT_BOT = "bot"
 	INTENT_TIME = "time"
 	INTENT_DATE = "date"
-	INTENTS_QUESTION = ["is", "can", "whatis", "what", "how", "whats", "howto", "when", "do", "who", "where", "which"]
+	INTENTS_QUESTION = ["is", "can", "whatis", "what", "how", "whats", "howto", "when", "do", "who", "where", "which", "if"]
 	
 	INTENTS_ASK = "askq"
 	ENTITY_QUERY = "query"
